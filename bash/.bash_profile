@@ -73,7 +73,7 @@ alias edit='subl'                           # edit:         Opens any file in su
 alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
 alias ~="cd ~"                              # ~:            Go Home
 alias c='clear'                             # c:            Clear terminal display
-alias h='history'                           # c:            Listory command line history
+alias h='history'                           # c:            History command line history
 alias which='type -all'                     # which:        Find executables
 alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable Paths
 alias show_options='shopt'                  # Show_options: display bash options settings
@@ -89,6 +89,9 @@ alias mcc='mvn clean compile'               # mcc           Maven clean and comp
 alias tf='terraform'                        # tf            Terraform
 alias tfp='terraform plan'                  # tfp           Terraform plan
 alias tfa='terraform apply'                 # tfa           Terraform apply
+alias gs='git status'                       # gs            Git status check on current repository
+alias gpm='git push origin master'          # gpm           Git push commits to master
+alias gup='git pull origin master'          # gup           Git pull from master branch
 
 #   lr:  Full Recursive Directory Listing
 #   ------------------------------------------
