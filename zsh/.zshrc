@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="apple"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -100,8 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="/Users/stevenverze/dev/tools:/opt/homebrew/opt/openjdk/bin:$PATH"
 
 
 #   -----------------------------
@@ -388,4 +387,18 @@ if [[ -f "$HOME/.zsh_api_keys" ]]; then
     source "$HOME/.zsh_api_keys"
 fi
 
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
 . "$HOME/.local/bin/env"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/stevenverze/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/stevenverze/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/stevenverze/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/stevenverze/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Go environment configuration
+export GOBIN="$HOME/go/bin"
+export PATH="$GOBIN:$PATH"
